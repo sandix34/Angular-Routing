@@ -2,6 +2,9 @@
   <h3 class="col-12">Users : </h3>
   <ul class="list-group">
     <li
+      [routerLink]="['/user', user.id]"
+      [queryParams]="{ name: user.name }"
+      [fragment]="'foo'"
       *ngFor="let user of users"
       class="list-group-item">
         {{ user.name }}
