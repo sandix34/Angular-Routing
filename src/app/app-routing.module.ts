@@ -10,7 +10,7 @@ import { UserEditComponent } from './user-details/user-edit/user-edit.component'
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'users', component: UserComponent, children: [
-    { path: ':id', canActivate: [AuthGuard], component: UserDetailsComponent, children: [
+    { path: ':id', resolve: { user: AuthGuard }, canActivate: [AuthGuard], component: UserDetailsComponent, children: [
       { path: 'edit', canDeactivate: [AuthGuard], component: UserEditComponent }
     ] }
   ] },

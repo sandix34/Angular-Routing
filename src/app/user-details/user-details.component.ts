@@ -25,6 +25,11 @@ export class UserDetailsComponent implements OnInit {
     this.activatedRoute.fragment.subscribe( (f) => {
       console.log(f);
     })
+
+    this.activatedRoute.data.subscribe(d => {
+      console.log(d);
+      
+    })
   }
 
 }
