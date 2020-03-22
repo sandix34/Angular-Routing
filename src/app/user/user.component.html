@@ -2,7 +2,7 @@
   <h3 class="col-12">Users : </h3>
   <ul class="list-group">
     <li
-      [routerLink]="['/user', user.id]"
+      [routerLink]="['/users', user.id]"
       [queryParams]="{ name: user.name }"
       [fragment]="'foo'"
       *ngFor="let user of users"
@@ -11,4 +11,5 @@
         <button class="btn btn-primary ml-auto"> Details </button>
     </li>
   </ul>
+  <router-outlet></router-outlet>
 </div>
